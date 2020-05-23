@@ -26,6 +26,24 @@
 
     <script>
         function q1() {
+            $('#names-q1').empty()
+            $.ajax({
+                type: "GET",
+                url: "http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/bikeList/1/99](http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/bikeList/1/99",
+                data {},
+                success: function (response) {
+                    const row = rentBikeStatus.row
+                    console.log(row)
+                    for (let i=0; i<row.length; i++) {
+                        <tr>
+                       <td> $('#names-q1').append(`<li>${row[i]['stationName']</td> 
+                        <td> ${row[i]['rackTotCnt']</td> 
+                        <td> ${row[i]['parkingBikeTotCnt'] </td>
+                        console.log(row[1])
+                        </tr>
+                    }
+                }
+            })
             // 여기에 코드를 입력하세요
         }
     </script>
@@ -51,8 +69,6 @@
                 </tr>
             </thead>
             <tbody id="names-q1">
-                
-                </tr>
             </tbody>
         </table>
     </div>
