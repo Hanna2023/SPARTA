@@ -77,7 +77,16 @@
         alert("Enter the address")
       } else if (inputV4 === "") {
         alert("Enter yout phone number")
+      } else if (!isPhoneNumber(inputV4)) {
+        alert("use the 010-0000-0000 format")
       } else alert("You are all set!")
+    }
+
+    function isPhoneNumber(str) {
+      const arr = str.split("-")
+      if (arr[0] == 3 && ) {
+        return true
+      } else return false
     }
   </script>
 </head>
@@ -164,5 +173,4 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 </body>
-
 </html>
